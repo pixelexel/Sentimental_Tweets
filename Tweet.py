@@ -24,13 +24,18 @@ with open('Tweet_Sentiments', 'w') as pointer:
 	newFileWriter.writerow(['Tweet', 'Label'])
 
 
+i=0.0
+k=0.0
 
 for tweet in public_tweets:
 	
 	analysis = TextBlob(tweet.text)
 
+	k+=1.0
+
 	if analysis.sentiment.polarity>0:
 		Label = 'POSITIVE'
+		i+=1.0
 	else :
 		Label = 'NEGATIVE'
 
@@ -38,3 +43,16 @@ for tweet in public_tweets:
 	with open('Tweet_Sentiments', 'a') as pointer:
 		newFileWriter = csv.writer(pointer)
 		newFileWriter.writerow([ tweet.text.encode('utf-8') , Label])
+
+
+
+if i/k >0.8:
+	print('Tweeters love ' + word)
+
+elif i/k > 0.5:
+	print('Tweeters have good things to say about ' + word)
+
+elif i/k > 0.3:
+	print('Tweeters don\'t really like ' + word)
+else: 
+	print('Tweeters hate ' + word)
