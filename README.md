@@ -1,11 +1,10 @@
 # Sentimental_Tweets
-Creates a CSV file of tweets and checks  whether sentiments related to them are positive or negative.
-
+Takes an input search term and givs the term's impression on twitter using sentiment analyisis.
+Also creates a CSV files of test tweets.
 
 It makes use of tweepy and textblob.
 
-tweepy is used to interact with the Twitter api while textblob helps separate the tweets into separate individual words and then using NLP figures out if the tweet is positive or not.
+tweepy is used to interact with the Twitter api while textblob helps separate the tweets into separate individual words and then using NLP and sentiment analysis an impression of the search term is provided.
 
-When sentiment.polarity > 0 => Postive tweet.
 
 
