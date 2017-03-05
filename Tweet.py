@@ -24,18 +24,18 @@ with open('Tweet_Sentiments', 'w') as pointer:
 	newFileWriter.writerow(['Tweet', 'Label'])
 
 
-positive_words = 0.0
-total_words = 0.0
+positive_tweets = 0.0
+total_tweets = 0.0
 
 for tweet in public_tweets:
-	
+
 	analysis = TextBlob(tweet.text)
 
-	total_words += 1.0
+	total_tweets += 1.0
 
 	if analysis.sentiment.polarity > 0:
 		Label = 'POSITIVE'
-		positive_words += 1.0
+		positive_tweets += 1.0
 	else :
 		Label = 'NEGATIVE'
 
@@ -46,13 +46,13 @@ for tweet in public_tweets:
 
 
 
-if positive_words/total_words >0.8:
+if positive_tweets/total_tweets >0.8:
 	print('Tweeters love ' + word)
 
-elif positive_words/total_words > 0.5:
+elif positive_tweets/total_tweets > 0.5:
 	print('Tweeters have good things to say about ' + word)
 
-elif positive_words/total_words > 0.3:
+elif positive_tweets/total_tweets > 0.3:
 	print('Tweeters don\'t really like ' + word)
-else: 
+else:
 	print('Tweeters hate ' + word)
