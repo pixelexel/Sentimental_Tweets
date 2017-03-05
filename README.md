@@ -1,6 +1,6 @@
 # Sentimental_Tweets
 Takes an input search term and givs the term's impression on twitter using sentiment analyisis.
-Also creates a CSV files of test tweets.
+Also creates a CSV file of test tweets.
 
 It makes use of tweepy and textblob.
 
