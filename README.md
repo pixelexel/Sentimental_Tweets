@@ -6,6 +6,6 @@ It makes use of tweepy and textblob. A variation using Pattern from http://www.c
 
 tweepy is used to interact with the Twitter api while textblob helps separate the tweets into separate individual words and then using NLP and sentiment analysis an impression of the search term is provided.
 
-Variation using Pattern was added which prevents the need for the Twitter authentication API.
+Variation using Pattern was added to see how Pattern works.
 
 
